@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逻辑中断</title>
+</head>
+<script>
+    //逻辑中断与
+    console.log(123&&456);//返回456
+    console.log(null&&123);//返回null
+    var num=0;
+    console.log(1&&num++);//返回0
+    console.log(num);//返回1
+    var num=0;
+    console.log(undefined&&num++);//返回undefined
+    console.log(num);//返回0
+    
+    //逻辑中断或
+    console.log(123||456);//返回123
+    console.log(null||123);//返回123
+    var num=0;
+    console.log(1||num++);//返回1
+    console.log(num);//返回0
+    var num=0;
+    console.log(undefined||num++);//返回0
+    console.log(num);//返回1
+</script>
+<body>
+    
+</body>
+</html>
