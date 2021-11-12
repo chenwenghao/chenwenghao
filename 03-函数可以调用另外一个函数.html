@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一个函数调用另外一个函数</title>
+</head>
+<script>
+    function fn1 (yaer){//判断闰年
+        if(year%4==0&&year%100!=0||year%400==0)
+        {
+            return true;
+        }
+        else return false;
+    }
+    function fn2 (year)
+    {
+        
+        if(fn1(year)) return 29;
+        else return 28;
+    }
+    var year=prompt('请输入一个年份');
+    alert('二月份天数是：'+fn2(year)+"天");
+</script>
+<body>
+    
+</body>
+</html>

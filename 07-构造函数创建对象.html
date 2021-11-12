@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>构造函数创建对象</title>
+</head>
+<script>
+    function Star(name,age,sex){
+        this.name=name;
+        this.age=age;
+        this.sex=sex;
+        this.sing=function (sang){
+            console.log(sang);
+            
+        }
+    }
+    var dzq=new Star('邓紫棋',18,'女');
+    console.log(dzq.name);
+    dzq.sing('光年之外');
+    
+    
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用对象字面量创建对象</title>
+</head>
+<script>
+    var obj= {
+        uname: '张三',
+        age: 18,
+        sex: '男',
+        sayHi: function() {
+            console.log('hi!');
+            
+        }
+    }
+
+    console.log(obj.age);
+    console.log(obj['uname']);
+    obj.sayHi();
+    
+    var obj1=new Object();
+    obj1.uname= '鸣人';
+    obj1.sex= '男';
+    obj1.age=19;
+    obj1.sayHi= function(){
+        console.log('hi');
+        
+    }
+    console.log(obj1.age);
+    console.log(obj1['uname']);
+    obj1.sayHi();
+</script>
+<body>
+    
+</body>
+</html>
