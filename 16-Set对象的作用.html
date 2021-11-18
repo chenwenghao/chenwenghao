@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set对象的作用</title>
+</head>
+<script>
+    //数组去重
+    let arr=[1,2,3,4,4]
+    let mySet=new Set(arr);
+    console.log(mySet);//{1,2,3,4}
+    //求并集
+    let a=new Set([1,2,3]);
+    let b=new Set([2,3,4]);
+    let union=new Set([...a,...b]);
+    console.log(union); //{1,2,3,4}
+    //求交集
+     let interesct = new Set([...a].filter(x => b.has(x)))
+    console.log(interesct)//{2,3}
+    //求差集
+     let difference1 = new Set([...a].filter(x => !b.has(x)))
+     let difference2 = new Set([...b].filter(x => !a.has(x)))
+    console.log(difference1);//{1}
+    console.log(difference2);
+    
+</script>
+<body>
+    
+</body>
+</html>

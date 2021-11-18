@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面向对象编程</title>
+</head>
+<script>
+      // ES 6 class 关键字
+    // class Point {
+    //     constructor(x,y) {
+    //         this.x = x;
+    //         this.y = y;
+    //     }
+    //     toString () {
+    //         return "("+ this.x +","+ this.y +")"
+    //     }
+    // }
+    //
+    // let point = new Point(100,200);
+    // console.log(point.toString())
+
+    // 函数嵌套实现面向对象
+    function createPersion(name) {
+        let obj = new Object();
+        obj.name = name;
+        obj.showName = function () {
+            alert(this.name)
+        }
+        return obj;
+    }
+    let p1 = createPersion("播仔");
+    p1.showName();
+
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数的this</title>
+    <script>
+        //1.普通函数的this：指向它的调用者，如果没有调用者默认指向windows；
+        //2.箭头函数的this对象，是定义函数时的对象，而不是使用函数时的对象
+        //3.箭头函数中的this，首先从它的父级作用域中找，如果父级作用域还是箭头函数再往上找。
+        var str = "window"
+    
+    const obj = {
+        str:"obj",
+        nativeFn: function() {
+            console.log(this.str,"当前词法作用域中的this")
+            return function () {
+                console.log("原生函数",this.str)
+            }
+        },
+        arrowFn: function() {
+            console.log(this.str,"当前词法作用域中的this")
+            return () => {
+                console.log("箭头函数",this.str)
+            }
+        },
+    }
+    
+    const  obj2 = {
+        str : "obj2"
+    }
+    
+    var nativeFn = obj.nativeFn();
+    var arrowFn = obj.arrowFn();
+    console.log("函数调用一 ***************")
+    nativeFn();
+    arrowFn();
+    
+    console.log("函数调用二 ***************")
+    nativeFn.call(obj2);
+    arrowFn.call(obj2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

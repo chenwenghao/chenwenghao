@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math函数：随机数&取整</title>
+</head>
+<script>
+    //0~1之间的随机小数
+    let random = Math.random();
+    console.log(random)
+
+    // 向上取整（往大取）
+    console.log(Math.ceil(12.03))
+    console.log(Math.ceil(-12.92));//-12
+    
+    // 向下取整(往小取)
+    console.log(Math.floor(12.3));//12
+    console.log(Math.floor(-12.9));//-13
+    
+    //四舍五入
+    console.log(Math.round(16.3)) // 16
+    console.log(Math.round(16.5)) // 17
+
+
+    console.log(Math.round(-16.5))   // -16
+    console.log(Math.round(-16.51)) // -17
+
+    //获取 一个 0 -9 之间随机整数
+    for (let i = 0; i < 20; i++) {
+        console.log(Math.floor( Math.random() * 10))
+    }
+
+
+</script>
+<body>
+    
+</body>
+</html>

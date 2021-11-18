@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set对象</title>
+</head>
+<script>
+    //array 转 set
+    let mySet=new Set([1,2,3,4,5]);
+    console.log(mySet);
+    
+    
+    // set 转 array
+    let myArray = [...mySet];
+    console.log(myArray);
+
+    let mySet1 = new Set([1, 2, 3, 4, 4]);
+    console.log([... mySet1])
+
+</script>
+<body>
+    set对象允许存储任何类型的唯一值，无论是原始值或者是对象引用。
+   <h3>Set存储的值总是唯一的，所以要判断两个值是否恒等</h3>
+    <ul>
+
+        <li>+0和-0恒等不能重复</li>
+        <li>undefined类型恒等不能重复</li>
+        <li>NaN和NaN不恒等，但是只能存一个</li>
+    </ul>
+</body>
+</html>

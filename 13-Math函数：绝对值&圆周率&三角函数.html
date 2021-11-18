@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对值&圆周率&三角函数</title>
+</head>
+<script>
+    //绝对值
+     console.log(Math.abs(-12))
+
+    //圆周率和三角函数
+    let a = [100,100];
+    let b = [200,200];
+    
+    let x = Math.abs(a[0] - b[0])
+    let y = Math.abs(a[1] - b[1])
+    let z = Math.sqrt(x*x + y*y);//开方
+    //Math.asin()反正弦函数，求出弧度
+    let angel =  Math.asin(y/z)/Math.PI * 180;
+    console.log(Math.round(angel))
+    
+    // // 计算幂 10^2
+     console.log( Math.pow(10,2))
+    // // 开根
+     console.log(Math.sqrt(100))
+</script>
+<body>
+    
+</body>
+</html>
